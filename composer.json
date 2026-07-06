@@ -1,0 +1,51 @@
+{
+    "name": "bvp/scraper-teikokudb",
+    "description": "BVP Scraper TeikokuDB",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "boatrace",
+        "library",
+        "scraper"
+    ],
+    "authors": [
+        {
+            "name": "shimomo",
+            "email": "bvp@shimomo.net"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/boatracevibeproject/scraper-teikokudb/issues",
+        "source": "https://github.com/boatracevibeproject/scraper-teikokudb"
+    },
+    "require": {
+        "php": "^8.4",
+        "symfony/browser-kit": "^8.0",
+        "symfony/css-selector": "^8.0",
+        "symfony/http-client": "^8.0"
+    },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.52",
+        "phpunit/phpunit": "^13.0",
+        "vimeo/psalm": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "BVP\\Scraper\\TeikokuDB\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BVP\\Scraper\\TeikokuDB\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "$schema": "https://getcomposer.org/schema.json"
+}
