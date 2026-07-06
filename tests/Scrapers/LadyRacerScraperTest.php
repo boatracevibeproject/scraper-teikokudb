@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace BVP\Scraper\TeikokuDB\Tests\Scrapers;
 
+use BVP\Scraper\TeikokuDB\Scraper;
 use BVP\Scraper\TeikokuDB\Scrapers\LadyRacerScraper;
 use PHPUnit\Framework\Attributes\DataProviderExternal;
 use PHPUnit\Framework\Attributes\Test;
@@ -23,6 +24,8 @@ final class LadyRacerScraperTest extends TestCase
     #[DataProviderExternal(LadyRacerScraperDataProvider::class, 'scrapeProvider')]
     public function testScrape(array $arguments, array $expected): void
     {
+        Scraper::throttle();
+
         $this->assertSame($expected, LadyRacerScraper::scrape(...$arguments));
     }
 }
