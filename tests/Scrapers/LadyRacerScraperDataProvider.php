@@ -16,7 +16,7 @@ final class LadyRacerScraperDataProvider
     {
         return [
             [
-                'arguments' => [20261],
+                'arguments' => [__DIR__ . '/../fixtures/trank_wracer_term_20262.html'],
                 'expected' => [
                     0 => [
                         'number' => 4502,
