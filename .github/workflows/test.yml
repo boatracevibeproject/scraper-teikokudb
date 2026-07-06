@@ -9,11 +9,16 @@ on:
     - cron: '0 0 * * *'
   workflow_dispatch:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   test:
     name: PHPUnit ${{ matrix.phpunit-version }} on PHP ${{ matrix.php-version }} (${{ matrix.dependency-version }}, Ubuntu 24.04)
     runs-on: ubuntu-24.04
     strategy:
+      max-parallel: 1
       matrix:
         php-version:
           - '8.4'
