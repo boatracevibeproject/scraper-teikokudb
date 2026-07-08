@@ -14,8 +14,12 @@ jobs:
     name: Psalm on PHP ${{ matrix.php-version }} (Ubuntu 24.04)
     runs-on: ubuntu-24.04
     strategy:
+      fail-fast: false
       matrix:
         php-version:
+          - '8.1'
+          - '8.2'
+          - '8.3'
           - '8.4'
           - '8.5'
     steps:
