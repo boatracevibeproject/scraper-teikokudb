@@ -23,7 +23,20 @@ final class LadyRacerScraper implements TermScraper
     /**
      * @param ?non-negative-int $term
      * @param ?\Symfony\Component\BrowserKit\HttpBrowser $httpBrowser
-     * @return array<non-negative-int, array<non-empty-string, mixed>>
+     * @return array<non-negative-int, array{
+     *   number: mixed,
+     *   name: mixed,
+     *   rank: mixed,
+     *   race_count: mixed,
+     *   win_rate: mixed,
+     *   first_place_count: mixed,
+     *   first_place_percent: mixed,
+     *   top_2_percent: mixed,
+     *   top_3_percent: mixed,
+     *   final_round_count: mixed,
+     *   championship_count: mixed,
+     *   average_start_timing: mixed,
+     * }>
      */
     #[\Override]
     public static function scrape(?int $term = null, ?HttpBrowser $httpBrowser = null): array
