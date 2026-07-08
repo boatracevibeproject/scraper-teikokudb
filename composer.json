@@ -19,14 +19,14 @@
         "source": "https://github.com/boatracevibeproject/scraper-teikokudb"
     },
     "require": {
-        "php": "^8.2",
+        "php": "^8.3",
         "symfony/browser-kit": "^7.0 || ^8.0",
         "symfony/css-selector": "^7.0 || ^8.0",
         "symfony/http-client": "^7.0 || ^8.0"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.52",
-        "phpunit/phpunit": "^11.5.50 || ^12.5.8 || ^13.0",
+        "phpunit/phpunit": "^12.5.8 || ^13.0",
         "vimeo/psalm": "^6.0"
     },
     "autoload": {
