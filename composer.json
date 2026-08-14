@@ -26,6 +26,7 @@
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.52",
+        "laravel/pint": "^1.30",
         "phpunit/phpunit": "^12.5.8 || ^13.0",
         "vimeo/psalm": "^6.0"
     },
@@ -45,6 +46,12 @@
         }
     },
     "scripts": {
+        "lint": [
+            "@php vendor/bin/pint --test"
+        ],
+        "lint:fix": [
+            "@php vendor/bin/pint"
+        ],
         "test": "phpunit"
     },
     "$schema": "https://getcomposer.org/schema.json"
